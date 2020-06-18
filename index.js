@@ -1,3 +1,10 @@
+const amount_saved = document.getElementById('amount_saved');
+const text_saved = document.getElementById('text_saved');
+const interest_rate = document.getElementById('interest_rate');
+const interest_text = document.getElementById('interes_text');
+const total_ = document.getElementById('total');
+const duration_text = document.getElementById('duration_res')
+
 //savings frequency value
 const frequency = document.getElementById('frequency');
 const frequencyValue = frequency.value;
@@ -15,7 +22,7 @@ const duration = document.getElementById('duration_text');
 const durationInYears = duration.innerHTML;
 
 //to get the button
-const calculate = document.getElementById('calculate');
+const calculate = document.querySelector('.calculate');
 
 
 
@@ -71,8 +78,15 @@ calculate.addEventListener('click', () => {
 
     interest_rate.innerHTML = `${rate}%`; //rate based on package chosen
 
-    interest_text.innerHTML = total_balance - total_savings; //interest value calculated
+    // interest_text.innerHTML = total_balance - total_savings; //interest value calculated
 
     total_.innerHTML = total_savings; //total savings without interest
-})
+
+    // duration_res.innerHTML = ` ${duration_text}  years `
+    console.log('yo')
+    console.log(
+        frequencyValue
+    );
+    
+});
 

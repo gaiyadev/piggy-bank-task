@@ -67,15 +67,45 @@
         <label for="Savings Amount">Savings Amount</label>
         <input type="text" name="Amount" id="amount">
 
-        <label for="Savings Frequency">Savings Target (in years)</label>
+        <label for="Savings Frequency">Savings Target (Duration)</label>
         <input type="text" id="duration_text" name="Target" id="">
+
+        <button class="calculate"> Calculate </button>
       </div>
+      </div>
+      <div class="container-2">
+        <div class="display">
+          <div class="center">
+            <h2>Total Saved</h2>
+            <p id="total"><span class="naira">N</span>1,430,000.00</p>
+            <p id="text_saved">You have saved N1,300,000.00 with an interest rate of N130,000.00 </p>
+            <hr>
+            <div class="center_attr">
+              <div>
+                <p>Interest Rate</p>
+                <p id="interest_rate">10%</p>
+              </div>
+              <div>
+                <p>Number of Payments</p>
+                <p>260</p>
+              </div>
+              <div>
+                <p>Interest Amount</p>
+                <p id="amount_saved"><span class="naira">N</span>1,430,000.00</p>
+              </div>
+              <div>
+                <p>Savings Duration</p>
+                <p id="duration_text">5 years</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
 
       
-
+    <script src="./index.js"></script>
       <script>
         $('[data-toggle="slide-collapse"]').on('click', function() {
             $navMenuCont = $($(this).data('target'));

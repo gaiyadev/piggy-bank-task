@@ -65,6 +65,8 @@
       }
 
       /* Main section */
+
+      
       h1{
         color: #144499;
       }
@@ -99,12 +101,57 @@
         border: 0;
         width: 70%;
         border-bottom: 1px solid #989494;;
-        padding: 1rem;
+        padding: .75rem;
         margin-bottom: 2rem;
       }
 
       .form-field label{
         margin: 1rem 0;
+      }
+
+      .calculate{
+        border: 0;
+        width: 50%;
+        margin-top: 1.2rem;
+        padding: 1rem;
+        color: #fff;
+        background-color: #5AC263;
+        border-radius: 6px ;
+      }
+
+      .calculate:hover{
+        background-color: #25993f;
+      }
+
+      .container-2{
+        background-color: #144499;
+        color: #fff;
+        padding: 1.5rem;
+        box-shadow: 2px 8px 20px rgba(44, 37, 37, 0.2);
+        border-radius: 15px;
+        text-align: center;
+        margin: 2rem 1rem;
+      }
+
+      #amount_saved{
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .container-2 p{
+        font-size: 15px;
+      }
+      .naira{
+        text-decoration: line-through;
+      }
+
+      .center_attr{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        margin-left: 1rem;
+        grid-gap: 15px;
+        padding: 2.5rem;
       }
 
 @media only screen and (max-width: 767px) {
@@ -174,4 +221,16 @@
       width: 100%;
     }
     
+  }
+
+  @media(min-width: 1000px){
+    #main{
+      display: flex;
+    }
+    .container{
+      width: 55%;
+    }
+    .container-2{
+      width: 35%;
+    }
   }
