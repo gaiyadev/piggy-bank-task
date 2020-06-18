@@ -48,7 +48,7 @@
       <h1>Interest Calculator</h1>
       <div class="form-field">
         <label for="Savings Frequency">Savings Frequency</label>
-        <select name="" id="frequency" class="select">
+        <select name="frequency" id="frequency" class="select">
           <option value="none">Select An Option</option>
           <option value="Daily">Daily</option>
           <option value="Weekly">Weekly</option>
@@ -57,11 +57,11 @@
         </select>
 
         <label for="Savings Frequency">Packages</label>
-        <select name="" id="package" class="select">
+        <select name="package" id="package" class="select">
           <option value="none">Select An Option</option>
           <option value="Standard">Standard</option>
           <option value="Flex Dollar">Flex Dollar</option>
-          <option value="Safelock">Safelock</option>
+          <option value="SafeLock">SafeLock</option>
         </select>
 
         <label for="Savings Amount">Savings Amount</label>
@@ -76,9 +76,9 @@
       <div class="container-2">
         <div class="display">
           <div class="center">
-            <h2>Total Saved</h2>
-            <p id="total"><span class="naira">N</span>1,430,000.00</p>
-            <p id="text_saved">You have saved N1,300,000.00 with an interest rate of N130,000.00 </p>
+            <h2>Total Balance</h2>
+            <p id="total"><span class="naira">N</span>0.00</p>
+            <p id="text_saved">You have saved 0.00 with an interest amount of 0.00 </p>
             <hr>
             <div class="center_attr">
               <div>
@@ -86,12 +86,12 @@
                 <p id="interest_rate">10%</p>
               </div>
               <div>
-                <p>Number of Payments</p>
-                <p>260</p>
+                <p> Total Savings</p>
+                <p id="total_">0.00</p>
               </div>
               <div>
                 <p>Interest Amount</p>
-                <p id="amount_saved"><span class="naira">N</span>1,430,000.00</p>
+                <p id="total_returns"><span class="naira">N</span>0.00</p>
               </div>
               <div>
                 <p>Savings Duration</p>
@@ -105,29 +105,29 @@
 
 
       
-    <script src="./index.js"></script>
-      <script>
-        $('[data-toggle="slide-collapse"]').on('click', function() {
-            $navMenuCont = $($(this).data('target'));
-            $navMenuCont.animate({
-            'width': 'toggle'
-            }, 350);
-            $(".menu-overlay").fadeIn(500);
+    <script>
+      $('[data-toggle="slide-collapse"]').on('click', function() {
+        $navMenuCont = $($(this).data('target'));
+        $navMenuCont.animate({
+          'width': 'toggle'
+        }, 350);
+        $(".menu-overlay").fadeIn(500);
         
-        });
-        $(".menu-overlay").click(function(event) {
-            $(".navbar-toggle").trigger("click");
-            $(".menu-overlay").fadeOut(500);
-        });
-        dataToggle = document.querySelector(".navbar-toggle");
-        console.log(dataToggle);
-        dataToggle.addEventListener("click", (e)=> {
-            classList = e.target.classList
-            classList.contains("collapsed") ?
-            classList.remove("collapsed")
-            :
-            classList.add("collapsed");
-        });
-      </script>
+      });
+      $(".menu-overlay").click(function(event) {
+        $(".navbar-toggle").trigger("click");
+        $(".menu-overlay").fadeOut(500);
+      });
+      dataToggle = document.querySelector(".navbar-toggle");
+      console.log(dataToggle);
+      dataToggle.addEventListener("click", (e)=> {
+        classList = e.target.classList
+        classList.contains("collapsed") ?
+        classList.remove("collapsed")
+        :
+        classList.add("collapsed");
+      });
+    </script>
+    <script src="index.js" type="text/javascript"></script> 
 </body>
 </html>
