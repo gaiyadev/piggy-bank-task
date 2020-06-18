@@ -30,6 +30,7 @@ calculate.addEventListener('click', function() {
     const duration = document.getElementById('duration_text');
     const durationInYears = duration.value;
 
+    const savings_duration = document.getElementById('savings_duration');
 
     let time; // this would be the amount of days, weeks or months in a year
 
@@ -65,21 +66,21 @@ calculate.addEventListener('click', function() {
 
     //function to calculate interest
     const interest = (capitalValue, durationInYears) => {
-    return (amountValue * (rate/100) * time * durationInYears);
+    return amountValue * (rate/100) * time * durationInYears;
     }
 
-    const interest_amount = interest(amountValue, durationInYears);
+    const returns = interest(amountValue, durationInYears);
+    const interest_amount = new Intl.NumberFormat('en-US').format(interest(amountValue, durationInYears));
 
     //this is to the total calculated savings without interest
-    const total_savings = (amountValue * time * durationInYears);
+    const savings = (amountValue * time * durationInYears)
+    const total_savings = new Intl.NumberFormat('en-US').format((amountValue * time * durationInYears));
 
     //total balance after interest is added
-    totalBalance = (total_savings + interest_amount);
-    const total_balance = totalBalance;
-    // console.log(total_savings);
-    // console.log(interest_amount);
+    totalBalance = (parseInt(savings) + parseInt(returns));
+    console.log(totalBalance);
 
-    total.innerHTML = total_balance; //total balance
+    total.innerHTML = `N${new Intl.NumberFormat('en-US').format((totalBalance))}`; //total balance
 
     text_saved.innerHTML = `You have saved N${total_savings} with an interest amount of N${interest_amount}`; //breakdown of total balance
 
@@ -88,5 +89,7 @@ calculate.addEventListener('click', function() {
     interest_text.innerHTML = interest_amount; //interest value calculated
 
     total_.innerHTML = total_savings; //total savings without interest
+
+    savings_duration.innerHTML = `${durationInYears} years`;
 });
 
