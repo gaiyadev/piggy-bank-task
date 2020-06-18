@@ -64,6 +64,49 @@
         transform: rotate(0);
       }
 
+      /* Main section */
+      h1{
+        color: #144499;
+      }
+
+      .select{
+        border: 1px solid #144499;
+        border-radius: 8px;
+        padding: 1rem ;
+        width: 70%;
+        margin-bottom: 3rem;
+      }
+
+      .form-field{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 5rem;
+      }
+
+      option{
+        padding: 1.3rem 0;
+      }
+
+      select,
+      option,
+      input{
+        color: #144499;;
+        font-weight: bold;
+      }
+
+      .form-field input{
+        border: 0;
+        width: 70%;
+        border-bottom: 1px solid #989494;;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .form-field label{
+        margin: 1rem 0;
+      }
+
 @media only screen and (max-width: 767px) {
     .navbar-default 
     .navbar-toggle{
@@ -127,5 +170,8 @@
       z-index: 49;
     }
 
+    .form-field{
+      width: 100%;
+    }
     
   }
