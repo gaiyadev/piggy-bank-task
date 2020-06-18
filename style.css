@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+.navbar{
+  font-family: 'Lato', sans-serif;
+}
+.navbar-default{
+    background-color: white;
+    height: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+}
+.navbar .navbar-brand{
+    color: #062863;
+}
+.navbar .navbar-brand img{
+    width: 2rem;
+    display: inline;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #062863;
+}
+
+.navbar-default .navbar-nav>li:last-child {
+    border: solid 1px #062863;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.navbar-default .navbar-nav>li:last-child a{
+    padding: 1rem;
+    width: 15rem;
+    text-align: center;
+}
+    .navbar-toggle {
+        border: solid red 2px;
+        background: transparent !important;
+      }
+      .navbar-toggle:hover {
+        background: transparent !important;
+      }
+      .navbar-toggle .icon-bar {
+        width: 22px;
+        transition: all 0.2s;
+      }
+      .navbar-toggle .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      .navbar-toggle .middle-bar {
+        opacity: 0;
+      }
+      .navbar-toggle .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+      .navbar-toggle.collapsed .top-bar {
+        transform: rotate(0);
+      }
+      .navbar-toggle.collapsed .middle-bar {
+        opacity: 1;
+      }
+      .navbar-toggle.collapsed .bottom-bar {
+        transform: rotate(0);
+      }
+
+@media only screen and (max-width: 767px) {
+    .navbar-default 
+    .navbar-toggle{
+        border: none;
+        color: #062863;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: white;
+        padding-left: 3rem;
+        font-size: 1.8rem;
+    }
+    #slide-navbar-collapse {
+      position: fixed;
+      top: 0;
+      left: 15px;
+      z-index: 99;
+      width: 280px;
+      height: 100%;
+      background-color: #062863;
+      color: white;
+      overflow: auto;
+    }
+    button.navbar-toggle.collapsed{
+        color: #062863;
+    }
+    .navbar-default 
+    .navbar-toggle:focus, 
+    .navbar-default 
+    .navbar-toggle:hover {
+        background-color: white;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #062863;
+    }
+    .navbar-default .navbar-nav>li:last-child {
+        border: none;
+    }
+    
+    .navbar-default .navbar-nav>li:last-child a{
+        padding: 1rem;
+        padding-left: 3rem;
+        width: 15rem;
+        width: 100%;
+        text-align: unset;
+    }
+    navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+        color: #808080
+    }
+
+    .menu-overlay {
+      display: none;
+      background-color: #000;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      /* IE7 & 8 */
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 49;
+    }
+
+    
+  }

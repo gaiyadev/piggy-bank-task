@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Piggyvest Investment Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="slide-collapse" data-target="#slide-navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png">
+                <span>piggyvest</span>
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="slide-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" >
+              <li><a href="#" >About</a></li>
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Log in</a></li>
+              <li><a href="#">Create Account</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </header>
+
+
+      
+
+      <script>
+        $('[data-toggle="slide-collapse"]').on('click', function() {
+            $navMenuCont = $($(this).data('target'));
+            $navMenuCont.animate({
+            'width': 'toggle'
+            }, 350);
+            $(".menu-overlay").fadeIn(500);
+        
+        });
+        $(".menu-overlay").click(function(event) {
+            $(".navbar-toggle").trigger("click");
+            $(".menu-overlay").fadeOut(500);
+        });
+        dataToggle = document.querySelector(".navbar-toggle");
+        console.log(dataToggle);
+        dataToggle.addEventListener("click", (e)=> {
+            classList = e.target.classList
+            classList.contains("collapsed") ?
+            classList.remove("collapsed")
+            :
+            classList.add("collapsed");
+        });
+      </script>
+</body>
+</html>
