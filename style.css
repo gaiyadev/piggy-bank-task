@@ -133,9 +133,9 @@
         margin: 2rem 1rem;
       }
 
-      #amount_saved{
+      #total{
         font-weight: 600;
-        font-size: 18px;
+        font-size: 3rem;
       }
 
       .container-2 p{
