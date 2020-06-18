@@ -25,3 +25,5 @@ The users total savings and balance is then displayed to the HTML.
 const total_balance = total_savings + interest(amountValue, durationInYears);
 ```
 ### Save With PiggyVest Today!
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a9b5e42-2ec8-44c7-b447-e20632ccb4e9/deploy-status)](https://app.netlify.com/sites/piggyvestcalculator/deploys)
