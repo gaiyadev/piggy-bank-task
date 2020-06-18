@@ -43,7 +43,7 @@ switch (frequencyValue) {
     case 'Weekly':
         time = 52;
         break;
-    case 'SafeLock':
+    case 'Monthly':
         time = 12;
         break;
     default:
