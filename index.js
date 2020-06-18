@@ -86,7 +86,7 @@ calculate.addEventListener('click', function() {
 
     interest_rate.innerHTML = `${rate}%`; //rate based on package chosen
 
-    interest_text.innerHTML = `M${interest_amount}`; //interest value calculated
+    interest_text.innerHTML = `N${interest_amount}`; //interest value calculated
 
     total_.innerHTML = `N${total_savings}`; //total savings without interest
 
